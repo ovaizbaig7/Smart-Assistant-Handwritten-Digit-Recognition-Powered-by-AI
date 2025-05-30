@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transcend - OCR AI Assistant</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+  <nav class="navbar">
+    <h1>Transcend</h1>
+    <div class="nav-links">
+      <button id="newChatBtn">🔄 New Chat</button>
+    </div>
+  </nav>
+
+  <!-- ✅ Chat Window -->
+<div class="chat-container" id="chatContainer">
+  <div class="bot-message">
+    <strong>Transcend:</strong> 👋 Hello! Upload a handwritten image or type your message.
+  </div>
+</div>
+
+
+  <!-- ✅ Input Field & Controls -->
+  <div class="chat-input-container">
+    <input type="text" id="chatInput" placeholder="Send a message..." autocomplete="off" />
+    <button id="micBtn">🎤</button>
+    <button id="uploadBtn">📁</button>
+    <button id="captureBtn">📷</button>
+    <button id="sendBtn">➤</button>
+  </div>
+
+  
+  <!-- ✅ Camera -->
+  <div id="cameraContainer" class="camera-container">
+    <video id="cameraFeed" autoplay></video>
+    <button id="snapBtn">📸 Capture</button>
+    <button id="closeCameraBtn">❌ Close</button>
+    <canvas id="canvas" style="display:none;"></canvas>
+  </div>
+
+
+  <!-- ✅ Loading Spinner -->
+  <div class="loader-overlay" id="loader">
+    <div class="loader">
+      <div class="loader-bar"></div>
+      <div class="loader-bar"></div>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- Hidden File Input -->
+  <input type="file" id="fileInput" accept="image/*" style="display:none;" />
+
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="this.style.display='none'">
+    <img src="" alt="Preview">
+  </div>
+
+  <!-- Scripts -->
+  <script src="/static/script2.js"></script>
+
+</body>
+</html>
